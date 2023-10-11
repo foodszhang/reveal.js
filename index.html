@@ -12,12 +12,55 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+        <style>
+            li {
+                font-size: xx-large;
+                align: left
+            }
+            .container{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    grid-template-rows: auto auto;
+                    grid-auto-flow: column;
+                    grid-column-gap: 5%;
+                    
+                }
+            .container2{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    grid-template-rows: auto auto auto;
+                    grid-auto-flow: column;
+                    column-gap: 5%;
+                }
+
+            .container2 li {
+                font-size: x-large;
+                align: left
+            }
+            .container3{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    grid-template-rows: auto auto;
+                    grid-auto-flow: column;
+                    grid-column-gap: 5%;
+                    
+                }
+            .container3 li {
+                font-size: x-large;
+                align: left
+            }
+        </style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+                <!--<section data-markdown="./mksrc/2023-科技论文写作-课堂汇报.md"-->
+                <section data-markdown="./src/2023-test-1.md"
+                     data-separator="^---\n"
+                     data-separator-vertical="^\n\n---\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="utf-8">
+                </section>
 			</div>
 		</div>
 
@@ -25,15 +68,24 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+        <script src="plugin/simplemenu/simplemenu.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+                simplemenu: {
+                    barhtml: {
+                        header: "<div class='menubar'><ul class='menu'></ul><div>",
+                        footer: ""
+                    },
+                    flat:true,
+                },
+
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes , Simplemenu]
 			});
 		</script>
 	</body>
